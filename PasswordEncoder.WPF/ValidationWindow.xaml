@@ -1,0 +1,21 @@
+﻿<Window x:Class="DesktopUI.ValidationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesktopUI"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"    
+        Height="170" Width="350" FontWeight="Thin" Background="#1A1B1C" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="CanMinimize">
+    <Border BorderBrush="#0B4F6C" BorderThickness="1">
+        <StackPanel Orientation="Vertical">
+            <StackPanel Background="#0B4F6C" x:Name="SpToolBar" MouseDown="SpToolBar_MouseDown">
+                <ToolBarPanel Orientation="Horizontal" HorizontalAlignment="Right" Height="10" />
+            </StackPanel>
+            
+            <TextBlock Text="Invalid input password!" FontSize="26" Foreground="White" HorizontalAlignment="Center" Margin="0 20 0 30" />
+
+            <Button Style="{StaticResource MaterialDesignOutlinedButton}" Width="110" FontSize="19" Content="Try again" FontWeight="Thin" Height="45" Foreground="Red" BorderBrush="Red" x:Name="BtnTryAgain" Click="BtnTryAgain_Click"/>
+        </StackPanel>
+    </Border>
+</Window>

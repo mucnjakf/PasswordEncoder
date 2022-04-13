@@ -1,0 +1,63 @@
+﻿<Window x:Class="DesktopUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesktopUI"
+        mc:Ignorable="d"          
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"    
+        Height="880" Width="800" FontWeight="Thin" Background="#3F4045" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="CanMinimize">
+    <Border BorderBrush="#0B4F6C" BorderThickness="1">
+        <StackPanel Orientation="Vertical">
+
+            <!-- Tool Bar -->
+
+            <StackPanel Background="#0B4F6C" x:Name="SpToolBar" MouseDown="SpToolBar_MouseDown">
+                <ToolBarPanel Orientation="Horizontal" HorizontalAlignment="Right" Height="35">
+                    <TextBlock Text="Password Encoder SHA256" Margin="0 0 530 0" VerticalAlignment="Center" FontSize="16" Foreground="White" />
+
+                    <Button Style="{StaticResource MaterialDesignIconForegroundButton}" Background="#0B4F6C" Height="30" Width="30" Margin="0 0 5 0" x:Name="BtnMinimize" Click="BtnMinimize_Click" >
+                        <materialDesign:PackIcon Kind="WindowMinimize" Foreground="#3F4045" Height="30" Width="30"/>
+                    </Button>
+
+                    <Button Style="{StaticResource MaterialDesignIconForegroundButton}" Background="#0B4F6C" Height="30" Width="30" Margin="5 0 5 0" x:Name="BtnExitToolBar" Click="BtnExit_Click" >
+                        <materialDesign:PackIcon Kind="Close" Foreground="#3F4045" Height="30" Width="30"/>
+                    </Button>
+                </ToolBarPanel>
+            </StackPanel>
+
+            <!-- Main Label -->
+
+            <TextBlock Text="Password Encoder SHA256" FontSize="30" HorizontalAlignment="Center" Foreground="White" Margin="0 15 0 0" />
+
+            <!-- Main Form -->
+            
+            <Border BorderBrush="White" BorderThickness="1" Width="680" Margin="0 20 0 0" CornerRadius="30">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Insert password" FontSize="26" HorizontalAlignment="Center" Foreground="White" Margin="0 15 0 0" />
+                    <TextBox Width="350" FontSize="26" Margin="0 20 0 0" Foreground="White" x:Name="TbInputPassword" />
+
+                    <TextBlock Text="Password" FontSize="26" HorizontalAlignment="Center" Foreground="White" Margin="0 25 0 0"/>
+                    <TextBox Background="Transparent" BorderThickness="0" IsReadOnly="True" HorizontalAlignment="Center" FontSize="26" Text="-" Foreground="White" Margin="0 20 0 0" x:Name="LblPasswordResult" />
+
+                    <TextBlock Text="Salt Hash" FontSize="26" HorizontalAlignment="Center" Foreground="White" Margin="0 25 0 0"/>
+                    <TextBox Background="Transparent" BorderThickness="0" IsReadOnly="True" HorizontalAlignment="Center" FontSize="26" Text="-" Foreground="White" Margin="0 20 0 0" x:Name="LblSaltHashResult" />
+
+                    <TextBlock Text="Password Hash" FontSize="26" HorizontalAlignment="Center" Foreground="White" Margin="0 25 0 0"/>
+                    <TextBox Background="Transparent" BorderThickness="0" IsReadOnly="True" HorizontalAlignment="Center" FontSize="26" Text="-" Foreground="White" Margin="0 20 0 0" x:Name="LblPasswordHashResult" />
+
+                    <Button Style="{StaticResource MaterialDesignOutlinedButton}" Width="150" FontSize="22" FontWeight="Thin" Content="Encode" Height="50" Margin="0 40 0 10" Foreground="Green" BorderBrush="Green" x:Name="BtnEncode" Click="BtnEncode_Click" />
+                    <Button Style="{StaticResource MaterialDesignOutlinedButton}" Width="110" FontSize="19" Content="Clear" FontWeight="Thin" Height="45" Margin="0 10 0 30" Foreground="Red" BorderBrush="Red" x:Name="BtnClear" Click="BtnClear_Click"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Close Button -->
+            
+            <Button Style="{StaticResource MaterialDesignIconForegroundButton}" Margin="0 30 0 0" x:Name="BtnExitMain" Click="BtnExit_Click" >
+                <materialDesign:PackIcon Kind="ExitToApp" Foreground="Red" Height="50" Width="50"/>
+            </Button>
+            
+        </StackPanel>
+    </Border>
+</Window>
+
