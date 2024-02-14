@@ -5,9 +5,7 @@ Password Encoder Windows Desktop Application - 2018.
 ---
 
 ### **Overview**
-Password Encoder is a Windows desktop application for encrypting passwords using SHA256 hashing algorithm.
-SHA256 hashing algorithm computes a 256-bit digital fingerprint, whose hexadecimal writing consists of 64 characters.
-The algorithm uses non-linear function which means it is one-way and can not be decrypted.
+PasswordEncoder is a Windows desktop application designed to encrypt passwords using the robust SHA256 hashing algorithm. This application generates a 256-bit digital fingerprint for passwords, ensuring enhanced security with a hexadecimal representation of 64 characters. Leveraging a non-linear function, the SHA256 algorithm provides one-way encryption, rendering passwords irreversible and resistant to decryption attempts.
 
 ---
 
@@ -17,7 +15,7 @@ The algorithm uses non-linear function which means it is one-way and can not be 
 ---
 
 ### **Tools**
-- Source Control: JetBrains Space
+- Source Control: GitHub
 - IDE: Visual Studio 2019
 
 ---
