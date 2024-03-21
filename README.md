@@ -1,4 +1,4 @@
-# <img src="passwordencoder.png" width="25"/> PasswordEncoder
+# <img src="passwordencoder.svg" width="25"/> PasswordEncoder
 
 ### **👁️ Overview**
 Password Encoder Windows Desktop Application - 2018.
